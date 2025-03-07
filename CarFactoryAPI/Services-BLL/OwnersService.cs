@@ -40,7 +40,7 @@ namespace CarAPI.Services_BLL
         public string BuyCar(BuyCarInput input)
         {
             var car = _carsRepository.GetCarById(input.CarId);
-            if (car == null)
+            if (car == null)    
                 return "Car doesn't exist";
             if (car.Owner != null)
                 return "Already sold";
